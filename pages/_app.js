@@ -14,12 +14,6 @@ const MyApp = ({ Component, pageProps }) => {
     return <ErrorPage statusCode={404} />
   }
 
-  //to Keep Heroku up !
-  const https = require('https');
-    setInterval(() => {
-      https.get("https://thawing-oasis-19527.herokuapp.com/");
-      console.log('pinged heroku!')
-   }, 25 * 60 * 1000); // every 25 minutes
 
 
   const { metadata, favicon, metaTitleSuffix } = global.attributes
