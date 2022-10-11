@@ -15,12 +15,11 @@ const MyApp = ({ Component, pageProps }) => {
   }
 
   //to Keep Heroku up !
-  const http = require('http');
+  const https = require('https');
     setInterval(() => {
-      http.get("https://thawing-oasis-19527.herokuapp.com/");
+      https.get("https://thawing-oasis-19527.herokuapp.com/");
       console.log('pinged heroku!')
-    }, 25); // every 25 minutes
-  // }, 25 * 60 * 1000); // every 25 minutes
+   }, 25 * 60 * 1000); // every 25 minutes
 
 
   const { metadata, favicon, metaTitleSuffix } = global.attributes
